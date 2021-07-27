@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a{
+        text-decoration: none;
+        color: white;
+    }
+        .add{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width:100%;
+            background:rgb(255, 135, 22);
+        }
+        .a{
+        text-decoration: none;
+        color: white;
+        box-shadow: 12px 12px 16px 0 rgba(0,0,0,0.25),-8px -8px 12px 0px rgba(255,255,255,0.3);
+        padding: 15px 30px;
+        border-radius: 5px;
+        transition: all 0.25s ease;
+    }
+    .a:hover{
+        color: white;
+        box-shadow: none;
+        color: rgb(255, 135, 22);
+        background-color: azure;
+    }
+    </style>
+</head>
+<body>
+    <div class="add">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <h2>Add blog</h2>
+            <p>Heading</p>
+            <input  name="heading"type="text">
+            <p>Content</p>
+            <textarea name="content" id="" cols="30" rows="10"></textarea><br>
+            <input type="submit" value="Add Blog"><br><br>
+            <a class="a" href="/">Back to blog</a>
+        </form>
+    </div>
+   
+</body>
+</html>
